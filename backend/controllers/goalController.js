@@ -8,27 +8,28 @@ const getGoals = (req, res) => {
 // @desc Set goals
 // @route POST /api/goals
 // @access Private
-const setGoals = (req, res) => {
+const setGoal = (req, res) => {
+  console.log(req.body)
   res.status(200).json({ message: 'Set goal' })
 }
 
 // @desc edit goals
 // @route PUT /api/goals/:id
 // @access Private
-const updateGoals = (req, res) => {
+const updateGoal = (req, res) => {
   res.status(200).json({ message: `Update goal ${req.params.id}` })
 }
 
 // @desc delete goals
 // @route GET /api/goals/:id
 // @access Private
-const deleteGoals = (req, res) => {
+const deleteGoal = (req, res) => {
   res.status(200).json({ message: `Delete goal ${req.params.id}` })
 }
 
 module.exports = {
   getGoals,
-  setGoals,
-  updateGoals,
-  deleteGoals
+  setGoal,
+  updateGoal,
+  deleteGoal
 }
